@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <!-- Metadata -->
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BCH Wallet</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="./index.css">
+
+  <!-- Scripts -->
+  <script src="https://cdn.mainnet.cash/mainnet-0.3.1.js"></script>
+  <script src="./index.js" defer></script>
+</head>
+<body>
+  <section>
+    <h1>Mainnet BCH Wallet</h1>
+
+    <div id="NewWalletArea">
+      <input type="text" id="WalletName" placeholder="Enter Username">
+      <input type="submit" value="Create/Select Wallet" onclick="MakeWallet()">
+    </div>
+
+    <div id="DisplayArea">
+      <h1>Your Wallets</h1>
+      <table>
+        <thead>
+          <th>Wallet Username</th>
+          <th>Private Key</th>
+          <th>Public Address</th>
+          <th>Account Balance</th>
+        </thead>
+        <tbody></tbody>
+      </table>
+    </div>
+
+    <div id="SpendingArea">
+      <h1><u>Make a Transaction</u></h1>
+      <input type="text" id="AmountSent"  placeholder="Enter Amount (BCH)">
+      <input type="text"   id="AddressSent" placeholder="Enter Receiver Address">
+      <input type="submit" value="Send BCH" onclick="SendBCH()">
+
+      <div class="alert"></div>
+    </div>
+  </section>
+</body>
+</html>
